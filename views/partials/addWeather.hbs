@@ -1,0 +1,28 @@
+<form action="/station/{{station.id}}/addweather" method="POST">
+    <div class="row" style="">
+        <div class="col-sm" style="width: 20%;">
+            <label htmlFor="inputCode" className="form-label" style="display:flex; flex-direction:column; padding-right: 20px;">Code</label>
+            <input type="number" placeholder="Code" className="form-control" id="inputCode" name="code" min="200" step="1" max="900 "style="-moz-appearance: textfield; display: flex; flex-direction: column; margin-right: 30px;">
+        </div>
+        <div class="col-sm" style="width: 20%;">
+            <label htmlFor="inputTemp" className="form-label" style="display:flex; flex-direction:column;">Temperatur</label>
+            <input type="number" placeholder="Temperatur" step="any" className="form-control" id="inputTemp" name="temp" min="-273.15" style="-moz-appearance: textfield; display: flex; flex-direction: column; margin-right: 30px;">
+        </div>
+        <div class="col-sm" style="width: 20%;">
+            <label htmlFor="inputWindspeed" className="form-label" style="display:flex; flex-direction:column;">Windgeschwindigkeit</label>
+            <input type="number" placeholder="Windgeschwindigkeit" step="any" className="form-control" id="inputWindspeed" min="0" name="windspeed" style="-moz-appearance: textfield; display: flex; flex-direction: column; margin-right: 30px;">
+        </div>
+        <div class="col-sm" style="width: 20%;">
+            <label htmlFor="inputWinddir" className="form-label" style="display:flex; flex-direction:column;">Windrichtung</label>
+            <input type="number" placeholder="Windrichtung (in Grad)" className="form-control" id="inputWinddir" name="winddir" min="0" step="1" max="360" style="-moz-appearance: textfield; display: flex; flex-direction: column; margin-right: 30px;">
+        </div>
+        <div class="col-sm" style="width: 20%;">
+            <label htmlFor="inputLuft" className="form-label" style="display:flex; flex-direction:column;">Luftdruck</label>
+            <input type="number" placeholder="Luftdruck" className="form-control" id="inputLuft" name="airpressure" min="0" step="1" style="-moz-appearance: textfield; display: flex; flex-direction: column; margin-right: 30px;">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 30px;">Messung hinzufügen</button>
+</form>
+<form action="/station/{{station.id}}/addautoweather/{{station.lat}}/{{station.lon}}" method="POST">
+    <button class="btn btn-warning" style="margin-top: 10px; margin-left: 0px; width: 280px;">Automatische Messung hinzufügen</button>
+</form>

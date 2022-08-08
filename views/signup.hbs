@@ -1,0 +1,24 @@
+{{> welcomemenu}}
+
+<div class="col-3" style="margin-top: 30px;">
+    <form action="/register" method="POST">
+        <div class="mb-3">
+            <label for="inputFirstName" class="form-label">Vorname</label>
+            <input type="text" class="form-control" id="inputFirstName" maxlength="50" name="firstName">
+        </div>
+        <div class="mb-3">
+            <label for="inputLastName" class="form-label">Nachname</label>
+            <input type="text" class="form-control" id="inputLastName" maxlength="50" name="lastName">
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Passwort</label>
+            <input type="password" class="form-control" id="inputPassword" minlength="6" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Registrieren</button>
+    </form>
+</div>
+
